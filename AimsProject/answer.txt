@@ -1,0 +1,4 @@
+
+Java có hỗ trợ constructor overloading thế nhưng môi tham số phải có signature khác nhau chẳng hạn như code bên dưới 
+public DVD(String title) { ... }
+public DVD(String category, String title) { ... }
