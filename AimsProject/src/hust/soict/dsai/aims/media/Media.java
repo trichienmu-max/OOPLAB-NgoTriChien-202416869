@@ -31,6 +31,8 @@ public class Media {
 
     @Override
     public String toString() {
-        return id + " - " + title + " - " + category + " - " + cost + "$";
+        return this.getTitle() + " - "
+                + this.getCategory()
+                + ": " + this.getCost() + "$";
     }
 }

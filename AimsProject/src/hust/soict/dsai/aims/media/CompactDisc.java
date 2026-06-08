@@ -47,14 +47,19 @@ public class CompactDisc extends Disc
     }
 
     @Override
-    public void play() {
-        System.out.println("Playing CD: "
-                + getTitle());
-
-        for (Track track : tracks) {
-            track.play();
-        }
+public void play() throws hust.soict.dsai.aims.exception.PlayerException {
+    if (this.getLength() <= 0) {
+        throw new hust.soict.dsai.aims.exception.PlayerException(
+                "ERROR: CD length is non-positive!");
     }
+
+    System.out.println("Playing CD: " + this.getTitle());
+    System.out.println("CD length: " + this.getLength());
+
+    for (Track track : tracks) {
+        track.play();
+    }
+}
 
     @Override
     public String toString() {

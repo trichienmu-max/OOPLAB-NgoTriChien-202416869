@@ -57,4 +57,20 @@ public class Cart {
         System.out.println(
                 "***************************************************");
     }
+    @Override
+public String toString() {
+    String cartDetails = "***********************CART***********************\n";
+
+    float totalCost = 0;
+
+    for (Media media : itemsOrdered) {
+        cartDetails += media.toString() + "\n";
+        totalCost += media.getCost();
+    }
+
+    cartDetails += "Total cost: " + totalCost + "\n";
+    cartDetails += "***************************************************";
+
+    return cartDetails;
+}
 }
